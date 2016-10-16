@@ -1,5 +1,9 @@
+#Programming Assignment 2
 
+#Description: Calculating repeated functions, for example, those in a loop may be costly
+# thus by cache the results we can pull them again.
 
+# makeCacheMatrix - creates a matrix object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     set <- function(y) {
@@ -14,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-
+# CacheSolve - computes the inverse of the matrix returned by makeCacheMatrix above.
 cacheSolve <- function(x, ...) {
     inv <- x$getinverse()
     if(!is.null(inv)) {
